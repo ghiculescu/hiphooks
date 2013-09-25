@@ -1,0 +1,5 @@
+gem 'puma'
+gem 'sinatra'
+gem 'hipchat'
+gem 'json'
+gem 'capistrano'
