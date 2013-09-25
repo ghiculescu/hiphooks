@@ -1,6 +1,3 @@
-require 'sinatra'
-configure { set :server, :puma }
-
 require_relative 'hipchat'
 require_relative 'mandrill'
 
