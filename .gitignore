@@ -1,2 +1,2 @@
 env.rb
-config
+config/deploy.rb
