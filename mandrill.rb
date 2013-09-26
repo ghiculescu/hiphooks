@@ -6,7 +6,7 @@ class Mandrill
     puts events
     JSON.parse(events).each do |event|
       msg = event['msg']
-      message = "Email opened by #{msg['email']}. Subject: #{msg['subject']}."
+      message = "Email #{color == HipChat::Colors::EMAIL_OPEN ? 'opened' : 'clicked'} by #{msg['email']}. Subject: #{msg['subject']}."
       unless msg['url'].nil?
         message = "#{message} URL: #{msg['url']}"
       end
