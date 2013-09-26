@@ -12,6 +12,8 @@ module HipChat
 
     def self.message(text, room, color)
       hipchat_auth_token = ENV['HIPCHAT_AUTH_TOKEN']
+      puts hipchat_auth_token
+      puts text
       if hipchat_auth_token
         hipchat = HipChat::Client.new(hipchat_auth_token)
         room = hipchat[room]
