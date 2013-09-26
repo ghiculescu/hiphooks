@@ -5,7 +5,7 @@ class Mandrill
   def self.process(events, color)
     JSON.parse(events).each do |event|
       msg = event['msg']
-      next if msg['email'].index("@payaus.com").present? # don't track if we open it
+      next unless msg['email'].index("@payaus.com").nil? # don't track if we open it
       next if msg['tags'].empty? # only display tagged emails
       next if msg['opens'].length > 1 # don't repeatedly show an email
 
