@@ -15,7 +15,7 @@ module HipChat
       if hipchat_auth_token
         hipchat = HipChat::Client.new(hipchat_auth_token)
         room = hipchat[room]
-        room.send('Alert', text, color: color)
+        room.send('Alert', text, color: color, notify: true)
       end
     end
   end
