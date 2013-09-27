@@ -10,8 +10,8 @@ class Mandrill
       next if msg['opens'].length > 1 # don't repeatedly show an email
 
       message = "Email #{color == HipChat::Colors::EMAIL_OPEN ? 'opened' : 'clicked'} by #{msg['email']}. Subject: #{msg['subject']}."
-      unless msg['url'].nil?
-        message = "#{message} URL: #{msg['url']}"
+      unless event['url'].nil?
+        message = "#{message} URL: #{event['url']}"
       end
       HipChat::Rooms.message(message, HipChat::Rooms::EMAILS, color)
     end
