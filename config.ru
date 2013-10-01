@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'active_support/core_ext'
 require 'exception_notification'
 
 set :environment, :production
