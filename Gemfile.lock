@@ -24,13 +24,6 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
-    columnize (0.3.6)
-    debugger (1.6.1)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.3)
-    debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.3)
     dotenv (0.8.0)
     erubis (2.7.0)
     exception_notification (4.0.1)
@@ -88,8 +81,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport (~> 4)
   capistrano
-  debugger
   exception_notification (= 4.0.1)
   foreman
   hipchat
