@@ -7,7 +7,6 @@ class Mandrill
       msg = event['msg']
       next unless msg['email'].index("@payaus.com").nil? # don't track if we open it
       next if msg['tags'].empty? # only display tagged emails
-      next if msg['opens'].length > 1 # don't repeatedly show an email
 
       message = "Email #{color == HipChat::Colors::EMAIL_OPEN ? 'opened' : 'clicked'} by #{msg['email']}. Subject: #{msg['subject']}."
       unless event['url'].nil?
