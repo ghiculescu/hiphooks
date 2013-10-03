@@ -7,6 +7,7 @@ class Mandrill
       puts event
       msg = event['msg']
       puts msg
+      next if msg['email'].nil? || msg['subject'].nil?
       next unless msg['email'].index("@payaus.com").nil? # don't track if we open it
       next if msg['tags'].empty? # only display tagged emails
 
