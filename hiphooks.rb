@@ -25,12 +25,14 @@ class SinatraApp < Sinatra::Base
 
   # from mandrill: an email was opened
   post '/mail/open' do
+    puts params
     Mandrill.process(params['mandrill_events'], HipChat::Colors::EMAIL_OPEN)
     status 200
   end
 
   # from mandrill: an email link was clicked
   post '/mail/click' do
+    puts params
     Mandrill.process(params['mandrill_events'], HipChat::Colors::EMAIL_CLICK)
     status 200
   end
